@@ -1,0 +1,82 @@
+{% load static %}
+ <!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'welcome.css' %}">
+    <title>SYED</title>
+  </head>
+  <body> 
+      
+    <br><br><br><hr>
+    <center>
+    Welcome to DataPMI</center>
+
+    
+
+    <header id="header">
+      <a href="#" class="logo"><img src="https://cdn.filestackcontent.com/iSbzGb22RwCuQb1KRGG8" width="200px" style="border-radius: 20px;"> </a>
+      <ul>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <!-- <li><a href="#">Signin</a></li>
+          <li><a href="#">Signup</a></li> -->
+      </ul>
+  </header>
+  
+  <Section>
+      <h2 id="text"><span>Work Hard Stay Humble</span><br>DataPMI</h2>
+      
+      <img src="https://user-images.githubusercontent.com/65358991/170092504-132fa547-5ced-40e5-ab64-ded61518fac2.png" id="bird1">
+      <img src="https://user-images.githubusercontent.com/65358991/170092542-9747edcc-fb51-4e21-aaf5-a61119393618.png" id="bird2">
+      <img src="https://user-images.githubusercontent.com/65358991/170092559-883fe071-eb4f-4610-8c8b-a037d061c617.png" id="forest">
+      
+      <a href="/login" id="btn">Signin/up</a>
+      
+      <img src="https://user-images.githubusercontent.com/65358991/170092605-eada6510-d556-45cc-b7fa-9e4d1d258d26.png" id="rocks">
+      <img src="https://user-images.githubusercontent.com/65358991/170092616-5a70c4af-2eed-496f-bde9-b5fcc7142a31.png" id="water">
+  </Section>
+  
+  <div class="sec">
+      <h2>Who we are</h2>
+      <p>DataPMI is a Data Analytics and Technology solutions company with offices in India at Bangalore & Kochi with its Corporate Headquarters in Texas, USA.
+<br><br>
+Our mission is to create business value by identifying opportunities where Machine Learning (ML), Natural Language Processing (NLP), and Advanced Algorithms (AA) can be applied in concert with other Data Science capabilities. Specifically, we look for opportunities where business processes can be optimized by using data-driven, analytics approaches to decision making. Supervised machine learning models are built by designing algorithms that can learn from historical data, and these models, once tuned for high accuracy, can be then applied to make predictions on new, unseen data and support what-if scenarios for the future. Novel unsupervised machine learning algorithms are developed when verifiable historical data is unavailable or unreliable and generate insights from data in an autonomous fashion. With the new Deep Learning methodology, we are expanding our tool chest leveraging “human-like” learning concepts and developing algorithms towards Artificial Intelligence. Our expertise in Natural Language Processing finally allows us to tap also into unstructured information such as clinical trial descriptions, patent claims, and social media, augmenting our portfolio of advanced capabilities that bring competitive advantage to our business.
+<br><br>
+We specialize in software development and providing information technology solutions to a board range of companies in specialized areas of project management implementation, eCommerce, Enterprise Performance Management (EPM), Corporate Performance Management (CPM), database administration, and internet/intranet web applications, Analytics, AI/ML and application engineering in collaboration with our technology partners Databricks, Anaplan, Board, Tableau, PowerBI, Automation Anywhere.
+<br><br>
+
+  </div>
+  <script>
+       let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+        
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            
+            text.style.top = 50 + value * -.1 + '%';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * 2 + 'px';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -.12 + 'px';
+            forest.style.top = value * .25 + 'px';
+            header.style.top = value * .5 + 'px';
+        })
+  </script>
+
+
+  </body>
+</html> 
